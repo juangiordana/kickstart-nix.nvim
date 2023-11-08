@@ -36,7 +36,7 @@ with final.pkgs.lib; let
 
     # Telescope and extensions.
     telescope-nvim # https://github.com/nvim-telescope/telescope.nvim/
-    telescope-fzy-native-nvim # https://github.com/nvim-telescope/telescope-fzy-native.nvim
+    telescope-fzf-native-nvim # https://github.com/nvim-telescope/telescope-fzf-native.nvim
     # telescope-smart-history-nvim # https://github.com/nvim-telescope/telescope-smart-history.nvim
 
     # UI.
@@ -72,6 +72,9 @@ with final.pkgs.lib; let
   ];
 
   extraPackages = with pkgs; [
+    fd # ~ telescope
+    ripgrep # ~ telescope
+
     # Language servers.
     lua-language-server
     nil # nix LSP
